@@ -290,7 +290,7 @@ const populateEvents = (event) => {
     card.appendChild(cardContent);
     cardContent.innerHTML = `
       <time id="event-data" class="event-date" datetime="${event[i].dateTime}">
-          <div class="event-container">
+          <div class="event-container" data-aos="zoom-in" data-aos-delay="100">
             <div class="date-container">
               <span class="month">${event[i].month()}</span>
               <span class="day">${event[i].day()}</span>
