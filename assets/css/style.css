@@ -826,8 +826,8 @@ section {
 } */
 
 .main-container {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   margin-bottom: 20px;
 }
 
@@ -909,12 +909,12 @@ section {
 
 /* media queries for smaller screens */
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   /* Event Cards */
 
-  #card {
+  /* #card {
     display: block;
-  }
+  } */
 
   .event-container {
     margin-bottom: 10px;
