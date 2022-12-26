@@ -1,9 +1,3 @@
-/**
-* Template Name: Restaurantly - v3.10.0
-* Template URL: https://bootstrapmade.com/restaurantly-restaurant-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
 
@@ -78,19 +72,13 @@
    * Toggle .header-scrolled class to #header when page is scrolled
    */
   let selectHeader = select('#header')
-  let selectTopbar = select('#topbar')
+  
   if (selectHeader) {
     const headerScrolled = () => {
       if (window.scrollY > 100) {
         selectHeader.classList.add('header-scrolled')
-        if (selectTopbar) {
-          selectTopbar.classList.add('topbar-scrolled')
-        }
       } else {
         selectHeader.classList.remove('header-scrolled')
-        if (selectTopbar) {
-          selectTopbar.classList.remove('topbar-scrolled')
-        }
       }
     }
     window.addEventListener('load', headerScrolled)
@@ -133,7 +121,7 @@
   }, true)
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scroll with offset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
@@ -151,7 +139,7 @@
   }, true)
 
   /**
-   * Scroll with ofset on page load with hash links in the url
+   * Scroll with offset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
     if (window.location.hash) {
@@ -182,9 +170,9 @@
         layoutMode: 'fitRows'
       });
 
-      let menuFilters = select('#menu-flters li', true);
+      let menuFilters = select('#menu-filters li', true);
 
-      on('click', '#menu-flters li', function(e) {
+      on('click', '#menu-filters li', function(e) {
         e.preventDefault();
         menuFilters.forEach(function(el) {
           el.classList.remove('filter-active');
@@ -200,13 +188,6 @@
       }, true);
     }
 
-  });
-
-  /**
-   * Initiate glightbox 
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
   });
 
   /**
@@ -277,9 +258,9 @@
 
 })()
 
-const card = document.getElementById("card");
-
 // Display Events from eventData (LOCATED IN events.js)
+
+const card = document.getElementById("card");
 const populateEvents = (event) => {
   const currentDate = new Date();
   event = eventData;
