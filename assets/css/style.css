@@ -130,7 +130,6 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
-  /* top: 40px; */
 }
 
 #header.header-scrolled {
@@ -156,34 +155,6 @@ h6 {
 
 #header .logo img {
   max-height: 40px;
-}
-
-/*--------------------------------------------------------------
-# Book a table button Menu
---------------------------------------------------------------*/
-.book-a-table-btn {
-  margin: 0 0 0 15px;
-  border: 2px solid #c6b58e;
-  color: #fff;
-  border-radius: 50px;
-  padding: 8px 25px;
-  text-transform: uppercase;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  transition: 0.3s;
-}
-
-.book-a-table-btn:hover {
-  background: #c6b58e;
-  color: #fff;
-}
-
-@media (max-width: 992px) {
-  .book-a-table-btn {
-    margin: 0 15px 0 0;
-    padding: 8px 20px;
-  }
 }
 
 /*--------------------------------------------------------------
@@ -661,7 +632,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# About
+# Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 15px 0;
@@ -819,15 +790,7 @@ section {
 # Upcoming Events
 --------------------------------------------------------------*/
 
-/* #card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 20px;
-} */
-
 .main-container {
-  /* display: flex;
-  justify-content: center; */
   margin-bottom: 20px;
 }
 
@@ -837,7 +800,6 @@ section {
   box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45) !important;
   background: rgba(139, 137, 137, 0.2) !important;
   border-radius: 16px !important;
-  /* border: 1px solid rgba(255, 255, 255, 0.589) !important; */
   margin-bottom: 20px;
   border-radius: 12px;
   padding: 0 50px;
@@ -911,10 +873,6 @@ section {
 
 @media (max-width: 900px) {
   /* Event Cards */
-
-  /* #card {
-    display: block;
-  } */
 
   .event-container {
     margin-bottom: 10px;
@@ -997,104 +955,14 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Menu Section
---------------------------------------------------------------*/
-.menu #menu-filters {
-  padding: 0;
-  margin: 0 auto 0 auto;
-  list-style: none;
-  text-align: center;
-  border-radius: 50px;
-}
-
-.menu #menu-filters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 8px 12px 10px 12px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1;
-  color: #fff;
-  margin-bottom: 10px;
-  transition: all ease-in-out 0.3s;
-  border-radius: 50px;
-  font-family: "Playfair Display", serif;
-}
-
-.menu #menu-filters li:hover,
-.menu #menu-filters li.filter-active {
-  color: #c6b58e;
-}
-
-.menu #menu-filters li:last-child {
-  margin-right: 0;
-}
-
-.menu .menu-item {
-  margin-top: 50px;
-}
-
-.menu .menu-img {
-  width: 70px;
-  border-radius: 50%;
-  float: left;
-  border: 5px solid rgba(255, 255, 255, 0.2);
-}
-
-.menu .menu-content {
-  margin-left: 85px;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-}
-
-.menu .menu-content::after {
-  content: "......................................................................""....................................................................""....................................................................";
-  position: absolute;
-  left: 20px;
-  right: 0;
-  top: -4px;
-  z-index: 1;
-  color: #bab3a6;
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-}
-
-.menu .menu-content a {
-  padding-right: 10px;
-  background: #1a1814;
-  position: relative;
-  z-index: 3;
-  font-weight: 700;
-  color: white;
-  transition: 0.3s;
-}
-
-.menu .menu-content a:hover {
-  color: #c6b58e;
-}
-
-.menu .menu-content span {
-  background: #1a1814;
-  position: relative;
-  z-index: 3;
-  padding: 0 10px;
-  font-weight: 600;
-  color: #c6b58e;
-}
-
-.menu .menu-ingredients {
-  margin-left: 85px;
-  font-style: italic;
-  font-size: 14px;
-  font-family: "Poppins", sans-serif;
-  color: rgba(255, 255, 255, 0.5);
-}
-
-/*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
+
 .gallery .gallery-item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px;
   overflow: hidden;
   border-right: 3px solid #454035;
   border-bottom: 3px solid #454035;
@@ -1113,8 +981,7 @@ section {
 --------------------------------------------------------------*/
 .directors .member {
   text-align: center;
-  margin-bottom: 20px;
-  /* background: #343a40; */
+  margin-bottom: 40px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1124,7 +991,6 @@ section {
 .directors .member img {
   width: 300px;
   height: 300px;
-  border-radius: 50%;
 }
 
 .directors .member .member-info {
@@ -1163,8 +1029,6 @@ section {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
   opacity: 1;
   transition: 0.4s; 
-  /* width: 300px; */
-  border-radius: 50%;
 }
 
 .directors .member:hover .member-info-content {
@@ -1298,5 +1162,57 @@ section {
   padding-top: 10px;
   text-align: center;
   font-size: 13px;
+  color: #fff;
+}
+
+#iframe {
+  padding: 20px;
+}
+
+/*--------------------------------------------------------------
+# Concert Program
+--------------------------------------------------------------*/
+
+.concert-program .box {
+  padding: 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.3s;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: rgba(139, 137, 137, 0.2);
+}
+
+.concert-program .box span {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #c6b58e;
+}
+
+.concert-program .box h4 {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0;
+  margin: 20px 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.concert-program .box p {
+  color: #aaaaaa;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.concert-program .box:hover {
+  background: #c6b58e;
+  padding: 30px 30px 70px 30px;
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+.concert-program .box:hover span,
+.concert-program .box:hover h4,
+.concert-program .box:hover p {
   color: #fff;
 }
