@@ -809,22 +809,21 @@ section {
 
 .main-container {
   margin-bottom: 20px;
-  /* display: flex;
-  justify-content: center; */
+  display: flex;
+  justify-content: center;
 }
 
 /* Event Cards  */
 
 .event-container {
-  box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45) !important;
-  background: rgba(139, 137, 137, 0.2);
-  border-radius: 16px !important;
-  margin-bottom: 20px;
+  box-shadow: inset 0 3px 6px rgba(0,0,0,0.16), 0 4px 6px rgba(0,0,0,0.45);
+  background: rgb(49, 49, 49);
   border-radius: 12px;
+  margin-bottom: 20px;
   padding: 0 50px;
   display: flex;
   align-items: center;
-  /* width: 50%; */
+  /* width: 100%; */
   z-index: 5;
 }
 
