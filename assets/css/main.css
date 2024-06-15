@@ -375,10 +375,10 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  --background-color: var(--background-color);
+  --background-color: var(--alt-background-color);
   --default-color: #fff;
   --heading-color: #fff;
-  color: var(--alt-background-color);
+  color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
   padding-bottom: 50px;
@@ -405,7 +405,7 @@ h6 {
   font-weight: 700;
   letter-spacing: 1px;
   font-family: var(--heading-font);
-  color: var(--alt-background-color);
+  color: var(--default-color);
 }
 
 .footer .footer-about p {
@@ -422,7 +422,7 @@ h6 {
   /* border-radius: 50%; */
   /* border: 1px solid color-mix(in srgb, var(--alt-background-color), transparent 50%); */
   font-size: 36px;
-  color: color-mix(in srgb, var(--alt-background-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -576,7 +576,7 @@ h6 {
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  border-top: 1px solid color-mix(in srgb, var(--alt-background-color), transparent 90%);
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .copyright p {
