@@ -275,6 +275,10 @@ h6 {
     box-shadow: 0px 0px 30px color-mix(in srgb, var(--default-color), transparent 90%);
   }
 
+  .navmenu li {
+    list-style: none;
+  }
+
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-dropdown-color);
