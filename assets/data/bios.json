@@ -1,0 +1,5 @@
+{
+  "_how_to_use": "To give a staff member a 'Read bio' button, add a line below with their name exactly as it appears on the Band Staff cards, then their bio as a list of paragraphs. People who are not listed here simply have no button. Delete this _how_to_use line if you like.",
+
+  "_example": ["This line is an example and is never shown. Copy the layout: name in quotes, a colon, then the paragraphs in square brackets, each in quotes and separated by commas."]
+}
