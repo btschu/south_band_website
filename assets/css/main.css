@@ -1761,3 +1761,22 @@ button:focus-visible {
   outline: 3px solid var(--accent-text-color);
   outline-offset: 2px;
 }
+
+
+/*--------------------------------------------------------------
+# About Us text, and card headings on white sections
+--------------------------------------------------------------*/
+.about-text p {
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* gold headings are only readable on the dark sections; use the deeper gold on white ones */
+.section:not(.section-bg) .service-item h4 {
+  color: var(--accent-text-color);
+}
+
+/* and full-strength text, not the faded gray, on white sections */
+.section:not(.section-bg) .service-item p {
+  color: var(--default-color);
+}
