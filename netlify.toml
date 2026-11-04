@@ -1,0 +1,19 @@
+# Settings for the South Band website on Netlify.
+# Pictures and the bundled libraries rarely change, so browsers may keep them for a while instead of
+# re-checking on every visit. If you replace a picture, give the new file a different name (or wait a week).
+# The page, main.css and main.js are not listed here, so edits to them show up right away.
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/assets/vendor/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/assets/files/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
