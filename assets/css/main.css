@@ -1780,3 +1780,11 @@ button:focus-visible {
 .section:not(.section-bg) .service-item p {
   color: var(--default-color);
 }
+
+
+/*--------------------------------------------------------------
+# Quick Links on the dark background: light gold icons (the deeper gold is for white sections)
+--------------------------------------------------------------*/
+.quick-links.section-bg .link-card .bi {
+  color: var(--accent-color);
+}
