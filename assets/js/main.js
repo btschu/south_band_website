@@ -85,14 +85,26 @@
    * Animation on scroll function and init
    */
   function aosInit() {
+    if (typeof AOS === 'undefined') return;   // animation script blocked or missing: the page just shows normally
     AOS.init({
       duration: 600,
       easing: 'ease-in-out',
       once: true,
-      mirror: false
+      mirror: false,
+      // people who ask their device for less motion get no animation at all
+      disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
     });
   }
-  window.addEventListener('load', aosInit);
+  // start right away instead of waiting for every picture to finish loading, then re-measure once they have
+  aosInit();
+  window.addEventListener('load', function() { if (typeof AOS !== 'undefined') AOS.refresh(); });
+
+  /**
+   * Footer year (so the copyright line never needs editing)
+   */
+  document.querySelectorAll('.current-year').forEach(function(year) {
+    year.textContent = new Date().getFullYear();
+  });
 
 
 

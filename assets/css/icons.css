@@ -1,0 +1,36 @@
+/* Icons used on the site (a small copy of Bootstrap Icons v1.11.3, MIT licence: https://icons.getbootstrap.com/).
+   Only the icons below are included. To use another icon, ask for it to be added. */
+@font-face {
+  font-display: block;
+  font-family: "bootstrap-icons";
+  src: url("../fonts/bootstrap-icons-subset.woff2") format("woff2");
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bi-arrow-up-short::before { content: "\f145"; }
+.bi-building::before { content: "\f1dd"; }
+.bi-calendar-event::before { content: "\f1e8"; }
+.bi-chevron-down::before { content: "\f282"; }
+.bi-envelope::before { content: "\f32f"; }
+.bi-facebook::before { content: "\f344"; }
+.bi-file-earmark-text::before { content: "\f38b"; }
+.bi-instagram::before { content: "\f437"; }
+.bi-list::before { content: "\f479"; }
+.bi-music-note-list::before { content: "\f49f"; }
+.bi-person-x::before { content: "\f4e0"; }
+.bi-threads::before { content: "\f8d9"; }
+.bi-x::before { content: "\f62a"; }

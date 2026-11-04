@@ -11,6 +11,7 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #111111; /* Color for headings, subheadings and title throughout the website */
+  --accent-text-color: #7d6228; /* A deeper gold for text and icons on light backgrounds, so they are easy to read */
   --accent-color: #c7a978; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --contrast-color: #ffffff; /* The contrast color is used for elements when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors */
 }
@@ -18,10 +19,10 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #212529;  /* The default color of the main navmenu links */
-  --nav-hover-color: #997d35; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #7d6228; /* Applied to main navmenu links when they are hovered over or active */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #997d35; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-hover-color: #7d6228; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Template Custom Colors */
@@ -620,7 +621,7 @@ h6 {
 
 .scroll-top i {
   font-size: 24px;
-  color: var(--contrast-color);
+  color: #111111;
   line-height: 0;
 }
 
@@ -1446,7 +1447,7 @@ section,
   font-size: 38px;
   line-height: 1;
   margin-bottom: 12px;
-  color: var(--accent-color);
+  color: var(--accent-text-color);
 }
 
 .quick-links .link-card h4 {
@@ -1463,18 +1464,21 @@ section,
 
 .quick-links .link-actions {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;   /* buttons are always stacked, the same on every card */
   gap: 8px;
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto;
 }
 
 .quick-links .link-actions a {
-  display: inline-block;
+  display: block;
+  text-align: center;
   padding: 9px 20px;
   border-radius: 4px;
   border: 1px solid var(--accent-color);
   background: var(--accent-color);
-  color: var(--contrast-color);
+  color: #111111;
   font-size: 15px;
   font-weight: 500;
   transition: 0.3s;
@@ -1482,15 +1486,6 @@ section,
 
 .quick-links .link-actions a:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
-.quick-links .link-actions a.secondary {
-  background: transparent;
-  color: color-mix(in srgb, var(--accent-color), #000 25%);
-}
-
-.quick-links .link-actions a.secondary:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 85%);
 }
 
 
@@ -1503,7 +1498,7 @@ section,
   border: 1px solid var(--accent-color);
   border-radius: 4px;
   background: transparent;
-  color: color-mix(in srgb, var(--accent-color), #000 25%);
+  color: var(--accent-text-color);
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -1513,7 +1508,7 @@ section,
 .team .team-member .bio-btn:hover,
 .team .team-member .bio-btn:focus-visible {
   background: var(--accent-color);
-  color: var(--contrast-color);
+  color: #111111;
 }
 
 .bio-dialog {
@@ -1711,4 +1706,58 @@ section,
     font-size: 28px;
     opacity: 0.9;
   }
+}
+
+
+/*--------------------------------------------------------------
+# Band Staff: every photo the same shape and size
+--------------------------------------------------------------*/
+.team .team-member .member-img img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.team .team-member .member-info {
+  padding: 16px 12px 20px;
+  text-align: center;
+}
+
+@media (max-width: 575px) {
+  .team .team-member .member-info h4 {
+    font-size: 16px;
+  }
+
+  .team .team-member .member-info span {
+    font-size: 13px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+# Accessibility: skip link and keyboard focus
+--------------------------------------------------------------*/
+.skip-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 100000;
+  padding: 10px 16px;
+  border-radius: 4px;
+  background: #111111;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  color: #ffffff;
+  outline: 3px solid var(--accent-color);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent-text-color);
+  outline-offset: 2px;
 }
