@@ -1425,3 +1425,74 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+/*--------------------------------------------------------------
+# Quick Links Section
+--------------------------------------------------------------*/
+.quick-links .link-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 28px 24px;
+  text-align: center;
+  border-radius: 7px;
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  background-color: color-mix(in srgb, var(--default-color), transparent 96%);
+  transition: 0.3s;
+}
+
+.quick-links .link-card:hover {
+  border-color: color-mix(in srgb, var(--accent-color), transparent 40%);
+  transform: translateY(-3px);
+}
+
+.quick-links .link-card .bi {
+  font-size: 38px;
+  line-height: 1;
+  margin-bottom: 12px;
+  color: var(--accent-color);
+}
+
+.quick-links .link-card h4 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.quick-links .link-card p {
+  margin: 0 0 18px 0;
+  font-size: 15px;
+  flex-grow: 1;
+}
+
+.quick-links .link-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.quick-links .link-actions a {
+  display: inline-block;
+  padding: 9px 20px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.quick-links .link-actions a:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.quick-links .link-actions a.secondary {
+  background: transparent;
+  color: color-mix(in srgb, var(--accent-color), #000 25%);
+}
+
+.quick-links .link-actions a.secondary:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 85%);
+}
